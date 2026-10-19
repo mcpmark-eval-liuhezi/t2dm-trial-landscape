@@ -106,20 +106,29 @@ Analysis returned for the 870 recruiting trials, exactly as the registry returne
 
 ## 3. Shortlist: recruiting, industry-sponsored, Phase 3 T2DM trials
 
-Query: condition `Type 2 Diabetes Mellitus`, overall status `RECRUITING`, lead sponsor class `INDUSTRY`, phase `PHASE3`; sorted by target enrollment (descending). The registry returned **54** matching trials; the 8 largest are listed. Machine-readable copy: [`data/shortlist.csv`](../data/shortlist.csv).
+Query: condition `Type 2 Diabetes Mellitus`, overall status `RECRUITING`, lead sponsor class `INDUSTRY`, phase `PHASE3`; ranked by target enrollment (descending). The registry returned **54** matching trials. Machine-readable copy: [`data/shortlist.csv`](../data/shortlist.csv).
 
 | # | NCT | Short title | Sponsor | Target enrollment |
 |---|---|---|---|---|
 | 1 | NCT07064473 | EASi-PROTKT™ — vicadrostat (BI 690517) + empagliflozin in T2DM, hypertension & CVD | Boehringer Ingelheim | 11,800 |
-| 2 | NCT07667803 | Master protocol: efficacy and safety of elecoglipron in obesity/overweight ± T2DM | AstraZeneca | 4,500 |
-| 3 | NCT07481747 | SURMOUNT-1: tirzepatide once weekly vs placebo in obese/overweight with comorbidities | Hudson Biotech | 2,539 |
-| 4 | NCT07784725 | AZD6234 in obesity/overweight with weight-related comorbidity (without T2DM) | AstraZeneca | 2,500 |
-| 5 | NCT07564414 | CagriSema (two doses) vs semaglutide for weight loss in obesity ± T2DM | Novo Nordisk A/S | 2,500 |
-| 6 | NCT07662109 | Eluminate-5: elecoglipron + dapagliflozin combination in adults with T2DM | AstraZeneca | 2,000 |
-| 7 | NCT07351045 | Enicepatide (RO7795068) in obesity/overweight without T2DM | Hoffmann-La Roche | 2,000 |
-| 8 | NCT07321886 | Eloralintide (LY3841136) in obesity/overweight without T2DM | Eli Lilly and Company | 1,980 |
+| 2 | NCT07667803 | Master protocol: elecoglipron in obesity/overweight with or without T2DM | AstraZeneca | 4,500 |
+| 3 | NCT07564414 | CagriSema (two doses) vs semaglutide for weight loss in obesity ± T2D | Novo Nordisk A/S | 2,500 |
+| 4 | NCT07662109 | Eluminate-5: elecoglipron + dapagliflozin combination in adults with T2DM | AstraZeneca | 2,000 |
+| 5 | NCT07797335 | AMBITION 7: zenagamtide vs insulin glargine in T2D with increased cardiovascular risk | Novo Nordisk A/S | 1,778 |
+| 6 | NCT07351058 | Enicepatide (RO7795068) in obesity or overweight **and** T2DM | Hoffmann-La Roche | 1,600 |
+| 7 | NCT07743450 | ASC30 (AURORA-2) in obesity or overweight with T2DM | Ascletis Pharma (China) Co., Limited | 1,560 |
+| 8 | NCT07784270 | AZD6234 (SELENE 2) in T2DM and obesity or overweight | AstraZeneca | 1,500 |
 
-> Caveat on composition: the registry's condition search for "Type 2 Diabetes Mellitus" also returns cardio-metabolic trials that enroll T2DM-adjacent populations (e.g., obesity trials that permit or exclude T2DM). Trials #3, #4, #7 and #8 are obesity/overweight trials surfaced by that match; #1, #2, #5 and #6 are T2DM-core or explicitly T2DM-inclusive. Enrollment figures are the registry's current target (mostly `ESTIMATED`, not actual).
+**Why this is not simply the top 8 raw matches:** every entry above was verified to **enroll T2DM participants** (T2DM listed in the registry conditions, or an explicitly T2DM-inclusive population). The registry's condition search for "Type 2 Diabetes Mellitus" also surfaces cardio-metabolic programs that *exclude* T2DM. The following higher-enrollment raw matches were screened out on that basis:
+
+| Excluded NCT | Why excluded | Raw enrollment |
+|---|---|---|
+| NCT07481747 (SURMOUNT-1, tirzepatide) | Enrolls adults **without** T2DM (prediabetes extension only) | 2,539 |
+| NCT07784725 (AZD6234 SELENE 1) | Obesity/overweight **without** T2DM | 2,500 |
+| NCT07351045 (enicepatide) | Obesity/overweight **without** T2DM | 2,000 |
+| NCT07321886 (eloralintide) | Obesity/overweight **without** T2DM | 1,980 |
+
+Enrollment figures are the registry's current target (mostly `ESTIMATED`, not actual).
 
 ---
 
@@ -165,7 +174,7 @@ Query: condition `Type 2 Diabetes Mellitus`, overall status `RECRUITING`, lead s
 | Primary outcome | Time to first event of cardiovascular death or heart failure event (up to 51 months) |
 | Arms | Vicadrostat + empagliflozin (experimental) vs vicadrostat-matched placebo + empagliflozin (active comparator) |
 
-### 4.3 NCT07662109 — Eluminate-5 (shortlist #6)
+### 4.3 NCT07662109 — Eluminate-5 (shortlist #4)
 
 **AstraZeneca — elecoglipron + dapagliflozin combination vs each agent alone in adults with T2DM.**
 
@@ -191,7 +200,7 @@ Query: condition `Type 2 Diabetes Mellitus`, overall status `RECRUITING`, lead s
 2. **Multi-phase counting.** The registry's phase analyses count a multi-phase trial once per phase bucket, so phase buckets sum to more than the study total (12,281 vs 11,971 overall; 892 vs 870 for recruiting). Treat phase buckets as non-exclusive.
 3. **Country figures are site-level, not trial-level.** The country analysis counts trial locations; a multi-country trial contributes to every country it runs in (verified: NCT01608724 → `China: 37`). Country counts therefore exceed the number of unique trials by design.
 4. **Sponsor class is lead-sponsor only.** `NIH` (107) counts NIH as lead sponsor; NIH-funded studies led by academic centers fall under `Other` (7,165).
-5. **Condition-search breadth.** "Type 2 Diabetes Mellitus" as a condition search returns T2DM-core trials plus adjacent cardio-metabolic trials (obesity/overweight programs) that match the condition indexing; see the shortlist caveat in §3.
+5. **Condition-search breadth.** "Type 2 Diabetes Mellitus" as a condition search returns T2DM-core trials plus adjacent cardio-metabolic trials (obesity/overweight programs) that match the condition indexing. The shortlist in §3 was manually verified so that every listed trial enrolls T2DM participants; higher-enrollment matches that exclude T2DM are documented explicitly in §3.
 6. **Enrollment figures.** Shortlist enrollment counts are targets (mostly `ESTIMATED`); NCT01608724's 2,165 is `ACTUAL`.
 7. **Status reconciliation.** The status table sums exactly to 11,971 (including 3 expanded-access-status records). Phase and sponsor partitions also reconcile exactly (3,502 + 4,365 + 4,104 = 11,971; 4,349 + 107 + 7,165 + 350 = 11,971).
 
@@ -199,7 +208,7 @@ Query: condition `Type 2 Diabetes Mellitus`, overall status `RECRUITING`, lead s
 
 ## 6. Methodology (reproducibility)
 
-- **Query base:** condition search `Type 2 Diabetes Mellitus` → 11,971 studies (2026-10-19).
+- **Query base:** condition search `Type 2 Diabetes Mellitus` → 11,971 studies (2026-10-19; re-verified same day).
 - **Analysis cap:** the trends-analysis tool processes at most 5,000 studies per run; a single whole-registry T2DM analysis was rejected (11,971 > 5,000). The full set was therefore covered with **disjoint partitions** whose totals reconcile exactly to 11,971:
   - Phase & country, partition A: `COMPLETED` **and** (lead sponsor class `INDUSTRY` or `NIH`) → 3,502 studies
   - Phase & country, partition B: `COMPLETED` **and not** (`INDUSTRY` or `NIH`) → 4,365 studies
@@ -207,6 +216,6 @@ Query: condition `Type 2 Diabetes Mellitus`, overall status `RECRUITING`, lead s
 - **Status counts:** exact `totalCount` values from status-filtered registry searches (each status is a disjoint bucket).
 - **Sponsor counts:** exact `totalCount` values from lead-sponsor-class-filtered searches; the 350 records outside `INDUSTRY`/`NIH`/`OTHER` were sub-analyzed (`OTHER_GOV` 244, `FED` 66, `NETWORK` 27, `INDIVID` 13).
 - **Recruiting-only phase breakdown:** single trends analysis on the `RECRUITING` filter (870 studies, under the cap).
-- **Shortlist:** `RECRUITING` + `INDUSTRY` lead sponsor + `PHASE3`, sorted by `EnrollmentCount` descending (54 matching trials; top 8 shown).
+- **Shortlist:** `RECRUITING` + `INDUSTRY` lead sponsor + `PHASE3`, sorted by `EnrollmentCount` descending (54 matching trials). Candidates were ranked by enrollment and then verified via full record pulls so that only T2DM-enrolling trials were retained; higher-enrollment trials that exclude T2DM are listed transparently in §3.
 - **Deep dives:** full study records pulled by NCT ID.
 - **Verification of the country metric:** a control analysis on NCT01608724 alone returned `China: 37` for a single study, confirming site-level counting.
