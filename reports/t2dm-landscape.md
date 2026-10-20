@@ -1,221 +1,191 @@
-# T2DM Clinical Trial Landscape Brief
+# Type 2 Diabetes Trial Landscape
 
-**Source:** ClinicalTrials.gov registry (live queries via the registry API)
-**Data as-of:** 2026-10-19 (UTC) — all counts are registry values as returned on this date
-**Prepared for:** Strategy review (landscape brief)
+A public research note on the type 2 diabetes mellitus (T2DM) clinical trial landscape: why the field is moving now, how the registered trial portfolio breaks down, which industry-sponsored trials are currently recruiting, and a registry reference trial.
 
----
+- **Registry data source:** ClinicalTrials.gov, queried via the registry API on 2026-10-20 (UTC).
+- **Web coverage:** recent public reporting, September–October 2026.
+- **Tracking issue:** [#1](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/1)
 
-## 1. Headline numbers
+**Scope of the registry analyses.** The registry's analysis tool caps a single analysis at 5,000 studies, and an unrestricted condition search for `Type 2 Diabetes Mellitus` returns 11,973 records across all study types (9,863 interventional; 5,282 interventional drug trials). The portfolio analyzed below is therefore scoped to **interventional drug trials with a start date on or after 2015-01-01** — the current-era T2DM drug-trial portfolio — which is **2,344 studies**. Every count in the "Registry breakdown" section is reported exactly as the corresponding analysis returned it, and each of the four analyses covered 2,344 studies (`totalStudies: 2344`).
 
-| Metric | Value (as returned) |
-|---|---|
-| Total T2DM trials in registry | **11,971** |
-| Currently recruiting | **870** |
-| Top country (by trial sites) | **United States — 49,262** |
+## Why now
 
----
+- **Once-weekly basal insulin has arrived in T2DM.** The U.S. FDA approved Eli Lilly's Onswik (insulin efsitora), a once-weekly basal insulin injection for adults living with type 2 diabetes — its fourth global approval, following regulatory actions from the European Medicines Agency, Mexico and others. *(Source: PR Newswire, "U.S. Food and Drug Administration (FDA) approves Lilly's Onswik…", Sep 24, 2026)*
+- **Roche reported positive Phase II results for the dual GLP-1/GIP receptor agonist enicepatide in people living with type 2 diabetes**, with weight loss of 15.5% at 48 weeks; trade coverage adds that the highest titrated dose (24 mg) achieved an HbA1c reduction of 2.65%, with 90% of that cohort reaching HbA1c ≤ 6.5%. *(Sources: Roche media release, Sep 22, 2026; Clinical Trials Arena, Sep 23, 2026)*
+- **Triple-agonist data is resetting expectations for how metabolic trials are designed.** Eli Lilly announced positive Phase III topline results for retatrutide, an investigational GIP/GLP-1/glucagon triple hormone receptor agonist, and an independent deep-dive on the retatrutide TRIUMPH-2 data argues it "forces a reckoning with how we design metabolic trials." *(Sources: Yahoo Finance, Oct 13, 2026; Clinical Trial Vanguard, Oct 12, 2026; SciTechDaily, Oct 19, 2026)*
+- **Care guidelines are formalizing the post-GLP-1 pipeline.** The 2026 consensus report on the management of type 2 diabetes notes that many nutrient-stimulated hormone-based medications and combinations are currently in development beyond GLP-1 receptor agonists, with the dual GLP-1/GIP class the first of these. *(Source: Davies et al., "Management of type 2 diabetes, 2026. A consensus report", Diabetologia / Springer, 2026)*
+- **GLP-1 benefits keep extending beyond glucose control, widening the outcome set that T2DM trials must power for.** New analyses report semaglutide lowered albuminuria by ~40% versus placebo in type 2 diabetes kidney disease while maintaining eGFR, and EASD 2026 congress coverage continues to feature next-generation candidates such as Tzeild alongside experimental weight-loss drugs. *(Sources: Tuttle et al., Nature Medicine, 2026; diaTribe, EASD 2026 coverage)*
 
-## 2. Registry-wide picture
+## Registry breakdown
 
-All figures below are exact registry counts for the condition search `Type 2 Diabetes Mellitus` (11,971 studies), retrieved 2026-10-19 (UTC). Because the analysis tool caps a single analysis at 5,000 studies, the full set was covered via disjoint partitions that together reconcile exactly to 11,971 (see §6 Methodology).
+All four analyses below were run on the same query — condition `Type 2 Diabetes Mellitus`, study type interventional, intervention type drug, start date on or after 2015-01-01 — and each analysis covered **2,344 studies**.
 
-### 2.1 By overall recruitment status
+### By phase
 
-| Overall status | Count |
-|---|---|
-| Completed | 7,867 |
-| Unknown | 1,531 |
-| Recruiting | 870 |
-| Not yet recruiting | 419 |
-| Active, not recruiting | 339 |
-| Terminated | 576 |
-| Withdrawn | 242 |
-| Enrolling by invitation | 92 |
-| Suspended | 32 |
-| Expanded-access statuses (AVAILABLE / NO_LONGER_AVAILABLE / TEMPORARILY_NOT_AVAILABLE, combined) | 3 |
-| **Total** | **11,971** |
+| Phase | Count (as returned) |
+| --- | --- |
+| PHASE4 | 588 |
+| PHASE3 | 559 |
+| PHASE1 | 531 |
+| PHASE2 | 480 |
+| NA | 236 |
+| EARLY_PHASE1 | 39 |
 
-### 2.2 By phase (all T2DM trials)
+> Note: the phase buckets sum to 2,433, which exceeds the 2,344-study total. The registry counts a multi-phase trial (e.g., Phase 1/Phase 2) once in each phase bucket, so the buckets are not mutually exclusive.
 
-Aggregated across three disjoint partitions (3,502 + 4,365 + 4,104 = 11,971 studies):
+### By overall status
 
-| Phase | Count |
-|---|---|
-| Phase 3 | 1,644 |
-| Phase 4 | 1,406 |
-| Phase 2 | 1,309 |
-| Phase 1 | 1,243 |
-| Early Phase 1 | 86 |
-| N/A (no phase assigned) | 4,481 |
-| Unknown | 2,112 |
+| Overall status | Count (as returned) |
+| --- | --- |
+| COMPLETED | 1,341 |
+| UNKNOWN | 338 |
+| RECRUITING | 250 |
+| NOT_YET_RECRUITING | 111 |
+| ACTIVE_NOT_RECRUITING | 109 |
+| TERMINATED | 99 |
+| WITHDRAWN | 75 |
+| ENROLLING_BY_INVITATION | 15 |
+| SUSPENDED | 6 |
 
-> **Important:** phase buckets sum to 12,281, which exceeds the 11,971 study total. The registry's phase analysis counts a multi-phase trial (e.g., "Phase 1/Phase 2") once in **each** phase bucket, so buckets are not mutually exclusive. `N/A` + `Unknown` together account for 6,593 records (mostly observational studies and records without a phase field).
+### By sponsor type (lead sponsor class)
 
-### 2.3 By sponsor type (lead sponsor class)
+| Sponsor type | Count (as returned) |
+| --- | --- |
+| INDUSTRY | 1,276 |
+| OTHER | 1,021 |
+| OTHER_GOV | 36 |
+| NIH | 5 |
+| FED | 3 |
+| NETWORK | 2 |
+| INDIV | 1 |
 
-| Lead sponsor class | Count |
-|---|---|
-| Other (academic, hospital, nonprofit, etc.) | 7,165 |
-| Industry | 4,349 |
-| NIH | 107 |
-| Other government (non-U.S. / non-federal) | 244 |
-| U.S. federal (non-NIH) | 66 |
-| Research network | 27 |
-| Individual | 13 |
-| **Total** | **11,971** |
+### By country
 
-> Note: `NIH` reflects the **lead sponsor class only**. NIH-funded trials led by universities or hospitals are counted under `Other`, so this understates total NIH-supported activity.
+The registry's country analysis counts **trial sites/locations**, not unique studies: a multi-country trial contributes one count to every country in which it runs, so the counts sum far beyond the 2,344-study portfolio. Full results as returned (92 countries/territories), sorted by count:
 
-### 2.4 By country — top 10 (trial-site counts)
+| Country | Count (as returned) |
+| --- | --- |
+| United States | 14,655 |
+| China | 3,030 |
+| Japan | 2,403 |
+| Canada | 1,622 |
+| Germany | 1,563 |
+| Poland | 1,322 |
+| India | 1,257 |
+| United Kingdom | 1,014 |
+| Spain | 982 |
+| South Korea | 938 |
+| Argentina | 907 |
+| Russia | 805 |
+| Hungary | 774 |
+| Mexico | 742 |
+| Italy | 734 |
+| Czechia | 659 |
+| Brazil | 622 |
+| Romania | 599 |
+| France | 573 |
+| Slovakia | 530 |
+| Australia | 508 |
+| Bulgaria | 459 |
+| Turkey (Türkiye) | 454 |
+| Israel | 445 |
+| Greece | 437 |
+| South Africa | 380 |
+| Taiwan | 373 |
+| Denmark | 273 |
+| Netherlands | 273 |
+| Ukraine | 258 |
+| Austria | 223 |
+| Belgium | 220 |
+| Puerto Rico | 215 |
+| Malaysia | 202 |
+| Sweden | 179 |
+| Portugal | 169 |
+| Thailand | 160 |
+| Serbia | 159 |
+| Chile | 128 |
+| Finland | 124 |
+| Croatia | 124 |
+| New Zealand | 116 |
+| Switzerland | 95 |
+| Norway | 94 |
+| Colombia | 92 |
+| Latvia | 65 |
+| Lithuania | 64 |
+| Egypt | 58 |
+| Saudi Arabia | 56 |
+| United Arab Emirates | 53 |
+| Pakistan | 46 |
+| Hong Kong | 44 |
+| Slovenia | 43 |
+| Georgia | 42 |
+| Philippines | 37 |
+| Ireland | 35 |
+| Peru | 35 |
+| Vietnam | 33 |
+| Algeria | 29 |
+| Singapore | 28 |
+| Estonia | 26 |
+| Indonesia | 16 |
+| Lebanon | 16 |
+| Nigeria | 13 |
+| Guatemala | 12 |
+| Iran | 11 |
+| Iraq | 10 |
+| Kuwait | 8 |
+| Sri Lanka | 7 |
+| North Macedonia | 7 |
+| Qatar | 6 |
+| Tunisia | 6 |
+| Bosnia and Herzegovina | 6 |
+| Jordan | 6 |
+| Bangladesh | 4 |
+| Burkina Faso | 3 |
+| Cameroon | 3 |
+| Moldova | 3 |
+| Mauritius | 3 |
+| Syria | 2 |
+| Kazakhstan | 2 |
+| Kosovo | 1 |
+| Guadeloupe | 1 |
+| Reunion | 1 |
+| Tanzania | 1 |
+| Afghanistan | 1 |
+| Kenya | 1 |
+| Morocco | 1 |
+| Paraguay | 1 |
+| Uzbekistan | 1 |
+| Costa Rica | 1 |
+| Dominican Republic | 1 |
 
-| Rank | Country | Trial sites |
-|---|---|---|
-| 1 | United States | 49,262 |
-| 2 | Japan | 6,207 |
-| 3 | China | 5,744 |
-| 4 | Germany | 5,667 |
-| 5 | Canada | 5,439 |
-| 6 | United Kingdom | 4,144 |
-| 7 | India | 3,906 |
-| 8 | Poland | 3,228 |
-| 9 | Russia | 3,170 |
-| 10 | Spain | 3,060 |
+## Recruiting trials to watch
 
-(Next: France 2,992, Italy 2,577, South Korea 2,547.)
+Query: condition `Type 2 Diabetes Mellitus`, overall status `RECRUITING`, lead sponsor class `INDUSTRY`, study type interventional, intervention type drug — the registry returns **116** matching studies. Three T2DM trials from that result set:
 
-> **Important:** the registry's country analysis counts **trial sites/locations**, not unique trials. A single multi-country trial contributes one count per country it runs in. Verified empirically: NCT01608724 alone (one study) returns `China: 37` — its 37 Chinese sites. So these figures measure geographic footprint of study locations, and country counts far exceed the 11,971 trial total by design.
+| NCT ID | Sponsor | Title |
+| --- | --- | --- |
+| NCT06671587 | Sanofi | iGlarLixi CGM Study in Chinese T2D Individuals After OADs |
+| NCT06739122 | Eli Lilly and Company | A Study of Dulaglutide (LY2189265) 3.0 mg and 4.5 mg in Pediatric Participants With Type 2 Diabetes Mellitus (AWARD-PEDS PLUS) |
+| NCT05268237 | Biolingus | Safety, Tolerability and Preliminary Efficacy of Sublingual Liraglutide in Patients With Type 2 Diabetes Mellitus |
 
-### 2.5 Phase breakdown restricted to currently recruiting trials (active pipeline)
+> Note: the top-ranked registry match under this query (NCT06451757, Khondrion BV — sonlicromanol in primary mitochondrial diseases) is not a T2DM trial per se; it enrolls people with T2DM only within a chronic kidney disease subgroup, so it is not included in the table above.
 
-Analysis returned for the 870 recruiting trials, exactly as the registry returned it:
+## Reference trial: NCT01608724
 
-| Phase | Count |
-|---|---|
-| N/A (no phase assigned) | 410 |
-| Unknown | 201 |
-| Phase 3 | 74 |
-| Phase 4 | 68 |
-| Phase 2 | 68 |
-| Phase 1 | 58 |
-| Early Phase 1 | 13 |
-
-> Buckets sum to 892 vs. 870 recruiting trials — same multi-phase counting behavior as §2.2.
-
----
-
-## 3. Shortlist: recruiting, industry-sponsored, Phase 3 T2DM trials
-
-Query: condition `Type 2 Diabetes Mellitus`, overall status `RECRUITING`, lead sponsor class `INDUSTRY`, phase `PHASE3`; ranked by target enrollment (descending). The registry returned **54** matching trials. Machine-readable copy: [`data/shortlist.csv`](../data/shortlist.csv).
-
-| # | NCT | Short title | Sponsor | Target enrollment |
-|---|---|---|---|---|
-| 1 | NCT07064473 | EASi-PROTKT™ — vicadrostat (BI 690517) + empagliflozin in T2DM, hypertension & CVD | Boehringer Ingelheim | 11,800 |
-| 2 | NCT07667803 | Master protocol: elecoglipron in obesity/overweight with or without T2DM | AstraZeneca | 4,500 |
-| 3 | NCT07564414 | CagriSema (two doses) vs semaglutide for weight loss in obesity ± T2D | Novo Nordisk A/S | 2,500 |
-| 4 | NCT07662109 | Eluminate-5: elecoglipron + dapagliflozin combination in adults with T2DM | AstraZeneca | 2,000 |
-| 5 | NCT07797335 | AMBITION 7: zenagamtide vs insulin glargine in T2D with increased cardiovascular risk | Novo Nordisk A/S | 1,778 |
-| 6 | NCT07351058 | Enicepatide (RO7795068) in obesity or overweight **and** T2DM | Hoffmann-La Roche | 1,600 |
-| 7 | NCT07743450 | ASC30 (AURORA-2) in obesity or overweight with T2DM | Ascletis Pharma (China) Co., Limited | 1,560 |
-| 8 | NCT07784270 | AZD6234 (SELENE 2) in T2DM and obesity or overweight | AstraZeneca | 1,500 |
-
-**Why this is not simply the top 8 raw matches:** every entry above was verified to **enroll T2DM participants** (T2DM listed in the registry conditions, or an explicitly T2DM-inclusive population). The registry's condition search for "Type 2 Diabetes Mellitus" also surfaces cardio-metabolic programs that *exclude* T2DM. The following higher-enrollment raw matches were screened out on that basis:
-
-| Excluded NCT | Why excluded | Raw enrollment |
-|---|---|---|
-| NCT07481747 (SURMOUNT-1, tirzepatide) | Enrolls adults **without** T2DM (prediabetes extension only) | 2,539 |
-| NCT07784725 (AZD6234 SELENE 1) | Obesity/overweight **without** T2DM | 2,500 |
-| NCT07351045 (enicepatide) | Obesity/overweight **without** T2DM | 2,000 |
-| NCT07321886 (eloralintide) | Obesity/overweight **without** T2DM | 1,980 |
-
-Enrollment figures are the registry's current target (mostly `ESTIMATED`, not actual).
-
----
-
-## 4. Deep dives
-
-### 4.1 NCT01608724 — SUNSHINE (cited in our draft)
-
-**AstraZeneca, saxagliptin 5 mg once daily for 24 weeks in T2DM.** Full record pulled 2026-10-19.
+All fields below are taken directly from the ClinicalTrials.gov registry record for NCT01608724, as they appear there.
 
 | Field | Registry value |
-|---|---|
-| Overall status | **COMPLETED** (status verified 2015-12) |
-| Phase | **Phase 4** |
-| Enrollment | **2,165 (ACTUAL)** |
-| Lead sponsor | **AstraZeneca (INDUSTRY)** — also the responsible party (sponsor) |
-| Study type / design | Interventional; single-arm, non-randomized, open-label (single group) |
-| Condition | Diabetes Mellitus, Non-Insulin-Dependent (Type 2 DM) |
-| Interventions | Drug: Saxagliptin (oral 5 mg Q.D.; other name: Onglyza) |
+| --- | --- |
+| NCT ID | NCT01608724 (org study ID: D1680L00008; acronym: SUNSHINE) |
+| Official title | A Multicenter, Single Arm, Cohort Study to Evaluate the Efficacy and Safety of Saxagliptin 5mg, Once Daily for 24 Weeks, in Patients With Type 2 Diabetes Mellitus |
+| Sponsor | AstraZeneca (lead sponsor, class INDUSTRY; responsible party: sponsor) |
+| Study design | Interventional, Phase 4, multicenter single-arm cohort study — non-randomized, single-group assignment, open label (no masking). Drug: **saxagliptin** (other name: Onglyza), oral **5 mg once daily (Q.D.)**, for **24 weeks**. Enrollment: 2,165 (actual). |
+| Overall status | COMPLETED (status verified 2015-12) |
 | Start date | 2012-11 |
-| Primary completion | 2014-05 (ACTUAL) |
-| Study completion | 2014-05 (ACTUAL) |
-| Last update posted | 2016-02-02 (estimated) |
-| Locations | China (site-level count: 37), e.g., Baotou, Beijing, Chengdu, Chongqing, Dalian… |
-| Primary outcome | Absolute change from baseline in HbA1c (weeks 6, 12, 24) |
+| Primary completion date | 2014-05 (actual) |
 
-**Verdict vs. our draft:** the registry record **matches** the draft's claim of a completed, industry-sponsored saxagliptin trial. Two refinements for the brief: the registry classifies it as **Phase 4** (post-marketing), not Phase 3, and the single-arm open-label design means it is an efficacy/safety cohort study rather than a randomized comparative trial.
-
-### 4.2 NCT07064473 — EASi-PROTKT™ (shortlist #1)
-
-**Boehringer Ingelheim — vicadrostat (BI 690517) + empagliflozin in T2DM, hypertension and established CVD.** Largest recruiting industry Phase 3 trial in the shortlist.
-
-| Field | Registry value |
-|---|---|
-| Overall status | RECRUITING (status verified 2026-10) |
-| Phase | Phase 3 |
-| Enrollment | 11,800 (ESTIMATED) |
-| Lead sponsor | Boehringer Ingelheim (INDUSTRY) |
-| Design | Randomized, parallel-group, quadruple-masked (participant, care provider, investigator, outcomes assessor); superiority |
-| Conditions | Diabetes Mellitus, Type 2; Hypertension; Cardiovascular Diseases |
-| Start / completion | Started 2025-07-22 (ACTUAL); primary completion 2029-12-14 and completion 2029-12-21 (ESTIMATED) |
-| Last update posted | 2026-10-14 (ACTUAL) |
-| Oversight | Data monitoring committee: yes; FDA-regulated drug: yes |
-| Primary outcome | Time to first event of cardiovascular death or heart failure event (up to 51 months) |
-| Arms | Vicadrostat + empagliflozin (experimental) vs vicadrostat-matched placebo + empagliflozin (active comparator) |
-
-### 4.3 NCT07662109 — Eluminate-5 (shortlist #4)
-
-**AstraZeneca — elecoglipron + dapagliflozin combination vs each agent alone in adults with T2DM.**
-
-| Field | Registry value |
-|---|---|
-| Overall status | RECRUITING (status verified 2026-08) |
-| Phase | Phase 3 |
-| Enrollment | 2,000 (ESTIMATED) |
-| Lead sponsor | AstraZeneca (INDUSTRY) |
-| Design | Randomized, double-blind, parallel-group, quadruple-masked; 5 arms (2 elecoglipron dose levels × dapagliflozin or matched placebo, plus dapagliflozin-alone comparator) |
-| Conditions | Type 2 Diabetes Mellitus |
-| Start / completion | Started 2026-07-06 (ACTUAL); primary completion and completion 2028-07-05 (ESTIMATED) |
-| Last update posted | 2026-08-31 (ACTUAL) |
-| Oversight | Data monitoring committee: no; FDA-regulated drug: yes |
-| Primary outcome | Change from baseline in HbA1c (baseline to Week 40) |
-| Secondary outcomes (selected) | HbA1c < 7% achievement, percent change in body weight, fasting plasma glucose |
+Additional registry details: condition "Diabetes Mellitus, Non-Insulin-Dependent" (keyword: Type 2 DM); primary outcome measure is the absolute change from baseline in HbA1c at weeks 6, 12 and 24; the study was conducted at research sites in China; study completion date 2014-05 (actual).
 
 ---
 
-## 5. Caveats
-
-1. **As-of date.** All counts in this brief are registry values retrieved on **2026-10-19 (UTC)** from the live ClinicalTrials.gov registry. The registry changes daily; re-run the queries before any number is quoted externally.
-2. **Multi-phase counting.** The registry's phase analyses count a multi-phase trial once per phase bucket, so phase buckets sum to more than the study total (12,281 vs 11,971 overall; 892 vs 870 for recruiting). Treat phase buckets as non-exclusive.
-3. **Country figures are site-level, not trial-level.** The country analysis counts trial locations; a multi-country trial contributes to every country it runs in (verified: NCT01608724 → `China: 37`). Country counts therefore exceed the number of unique trials by design.
-4. **Sponsor class is lead-sponsor only.** `NIH` (107) counts NIH as lead sponsor; NIH-funded studies led by academic centers fall under `Other` (7,165).
-5. **Condition-search breadth.** "Type 2 Diabetes Mellitus" as a condition search returns T2DM-core trials plus adjacent cardio-metabolic trials (obesity/overweight programs) that match the condition indexing. The shortlist in §3 was manually verified so that every listed trial enrolls T2DM participants; higher-enrollment matches that exclude T2DM are documented explicitly in §3.
-6. **Enrollment figures.** Shortlist enrollment counts are targets (mostly `ESTIMATED`); NCT01608724's 2,165 is `ACTUAL`.
-7. **Status reconciliation.** The status table sums exactly to 11,971 (including 3 expanded-access-status records). Phase and sponsor partitions also reconcile exactly (3,502 + 4,365 + 4,104 = 11,971; 4,349 + 107 + 7,165 + 350 = 11,971).
-
----
-
-## 6. Methodology (reproducibility)
-
-- **Query base:** condition search `Type 2 Diabetes Mellitus` → 11,971 studies (2026-10-19; re-verified same day).
-- **Analysis cap:** the trends-analysis tool processes at most 5,000 studies per run; a single whole-registry T2DM analysis was rejected (11,971 > 5,000). The full set was therefore covered with **disjoint partitions** whose totals reconcile exactly to 11,971:
-  - Phase & country, partition A: `COMPLETED` **and** (lead sponsor class `INDUSTRY` or `NIH`) → 3,502 studies
-  - Phase & country, partition B: `COMPLETED` **and not** (`INDUSTRY` or `NIH`) → 4,365 studies
-  - Phase & country, partition C: **not** `COMPLETED` → 4,104 studies
-- **Status counts:** exact `totalCount` values from status-filtered registry searches (each status is a disjoint bucket).
-- **Sponsor counts:** exact `totalCount` values from lead-sponsor-class-filtered searches; the 350 records outside `INDUSTRY`/`NIH`/`OTHER` were sub-analyzed (`OTHER_GOV` 244, `FED` 66, `NETWORK` 27, `INDIVID` 13).
-- **Recruiting-only phase breakdown:** single trends analysis on the `RECRUITING` filter (870 studies, under the cap).
-- **Shortlist:** `RECRUITING` + `INDUSTRY` lead sponsor + `PHASE3`, sorted by `EnrollmentCount` descending (54 matching trials). Candidates were ranked by enrollment and then verified via full record pulls so that only T2DM-enrolling trials were retained; higher-enrollment trials that exclude T2DM are listed transparently in §3.
-- **Deep dives:** full study records pulled by NCT ID.
-- **Verification of the country metric:** a control analysis on NCT01608724 alone returned `China: 37` for a single study, confirming site-level counting.
+*Prepared as the lab's public research note on the T2DM clinical trial landscape. Registry figures are as returned on 2026-10-20 (UTC) and will drift as the registry updates.*
