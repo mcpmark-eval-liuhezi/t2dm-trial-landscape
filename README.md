@@ -1,16 +1,20 @@
 # t2dm-trial-landscape
 
-Landscape brief on **type 2 diabetes mellitus (T2DM) clinical trials**, with every figure pulled live from the ClinicalTrials.gov registry (data as-of 2026-10-19 UTC).
+Landscape brief on **type 2 diabetes mellitus (T2DM) clinical trials**, with every figure pulled live from the ClinicalTrials.gov registry (data as-of 2026-10-20 UTC).
 
 ## Contents
 
-- [`reports/t2dm-landscape.md`](reports/t2dm-landscape.md) — the full write-up: registry-wide breakdowns (status, phase, sponsor type, country), the recruiting industry Phase 3 shortlist, and deep-dive profiles (NCT01608724 SUNSHINE, NCT07064473 EASi-PROTKT, NCT07662109 Eluminate-5), plus caveats and methodology.
-- [`data/shortlist.csv`](data/shortlist.csv) — machine-readable shortlist (recruiting, industry-sponsored, Phase 3, sorted by target enrollment).
+- [`reports/t2dm-landscape.md`](reports/t2dm-landscape.md) — the full research note: a "why now" web-scan of recent T2DM drug-development coverage (each bullet sourced), the registry portfolio breakdown by phase, overall status, sponsor type and country, three currently recruiting industry-sponsored T2DM trials, and a reference-trial profile of NCT01608724 (AstraZeneca SUNSHINE), plus methodology notes and caveats.
+- [`data/shortlist.csv`](data/shortlist.csv) — supplementary machine-readable shortlist of recruiting, industry-sponsored, Phase 3 T2DM trials (sorted by target enrollment), captured from the registry on 2026-10-19.
 
-## Headline numbers (as-of 2026-10-19)
+## Headline numbers (as-of 2026-10-20)
 
-- **Total T2DM trials:** 11,971
-- **Currently recruiting:** 870
-- **Top country (by trial sites):** United States — 49,262
+- **Unrestricted condition search (`Type 2 Diabetes Mellitus`):** 11,973 records (9,863 interventional; 5,282 interventional drug trials)
+- **Analyzed portfolio (interventional drug trials started ≥ 2015-01-01):** 2,344 studies — this is the scope of the report's registry breakdown
+- **Industry-sponsored, recruiting, interventional drug trials:** 116
 
-> Counts are registry values as of the date above and change daily. See the caveats section of the report before quoting figures externally (notably: phase buckets count multi-phase trials once per phase, and country figures count trial sites rather than unique trials).
+> Counts are registry values as of the date above and change daily. See the scope note and caveats in the report before quoting figures externally (notably: phase buckets count multi-phase trials once per phase, and country figures count trial sites rather than unique trials).
+
+---
+
+Tracking issue: [#1 — T2DM trial landscape brief](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/1)
