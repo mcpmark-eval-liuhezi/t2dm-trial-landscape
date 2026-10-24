@@ -9,7 +9,7 @@ Quarterly landscape brief on **type 2 diabetes mellitus (T2DM) clinical trials**
 - **§ Reference study — SUNSHINE (NCT01608724)** — industry-run T2DM trial profile
 - **§ Current landscape** — total count and recruiting breakdowns by phase, sponsor type and country
 - **§ Watch list** — five most recently started recruiting T2DM trials, with title/sponsor/phase verified against each trial's own registry record
-- **Watch-list tracking:** [#1 — Watch list follow-ups](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/1) (each trial filed as its own sub-issue under this parent issue — assign owners there)
+- **Watch-list tracking:** [#11 — Watch list follow-ups](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/11) (each trial filed as its own sub-issue under this parent issue — assign owners there)
 
 ---
 
@@ -185,13 +185,13 @@ Sorted by registry start date, descending (pulled 2026-10-24 UTC). Each trial's 
 
 ### Follow-up tracker
 
-Tracking issue **[#1 — Watch list follow-ups](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/1)** lists all five NCT IDs with one-line notes; each trial is filed as its own sub-issue under this parent issue so owners can be assigned:
+Tracking issue **[#11 — Watch list follow-ups](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/11)** lists all five NCT IDs with one-line notes; each trial is filed as its own sub-issue under this parent issue so owners can be assigned:
 
-- #2 — NCT07748208 (Hoffmann-La Roche, Phase 2)
-- #3 — NCT07888257 (German Institute of Human Nutrition, N/A)
-- #4 — NCT07802106 (Universidade Sao Francisco, N/A)
-- #5 — NCT07878325 (Odense University Hospital, N/A)
-- #6 — NCT07409714 (University of Colorado, Denver, Early Phase 1)
+- [#12](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/12) — NCT07748208 (Hoffmann-La Roche, Phase 2)
+- [#13](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/13) — NCT07888257 (German Institute of Human Nutrition, N/A)
+- [#14](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/14) — NCT07802106 (Universidade Sao Francisco, N/A)
+- [#15](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/15) — NCT07878325 (Odense University Hospital, N/A)
+- [#16](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/16) — NCT07409714 (University of Colorado, Denver, Early Phase 1)
 
 ## Methodology & caveats
 
