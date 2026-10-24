@@ -1,14 +1,15 @@
 # t2dm-trial-landscape
 
-Quarterly landscape brief on **type 2 diabetes mellitus (T2DM) clinical trials**, pulled live from the ClinicalTrials.gov registry on **2026-10-20 (UTC)**. Group: Beijing.
+Quarterly landscape brief on **type 2 diabetes mellitus (T2DM) clinical trials**, pulled live from the ClinicalTrials.gov registry on **2026-10-24 (UTC)**. Group: Beijing.
+
+> **Publishing note:** this repository was created under the GitHub organization `mcpmark-eval-liuhezi` rather than the personal account `HeziLiu` — the connected personal access token was blocked by a 403 ("Resource not accessible by personal access token") from creating repositories in the personal account, so repo creation landed under the org. The repository is currently **public**; if it should be private for team use, someone with org rights needs to flip it to "Private" in the repository settings.
 
 ## Contents
 
 - **§ Reference study — SUNSHINE (NCT01608724)** — industry-run T2DM trial profile
-- **§ Current landscape** — totals, recruiting breakdowns by phase, sponsor type and country
-- **§ Watch list** — five most recently started recruiting T2DM trials, plus China-site count
-- [`reports/t2dm-landscape.md`](reports/t2dm-landscape.md) and [`data/shortlist.csv`](data/shortlist.csv) — the earlier long-form research note and machine-readable shortlist
-- **Follow-up tracking:** [#3 — Watch list follow-ups](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/3) (each trial filed as a sub-issue — assign owners there)
+- **§ Current landscape** — total count and recruiting breakdowns by phase, sponsor type and country
+- **§ Watch list** — five most recently started recruiting T2DM trials, with title/sponsor/phase verified against each trial's own registry record
+- **Watch-list tracking:** [#1 — Watch list follow-ups](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/1) (each trial filed as its own sub-issue under this parent issue — assign owners there)
 
 ---
 
@@ -28,127 +29,176 @@ A multicenter, single-arm, cohort study of saxagliptin 5 mg once daily for 24 we
 | **Primary completion** | May 2014 (actual) |
 | **Study completion** | May 2014 (actual) |
 | **Design** | Interventional, single group (open label), non-randomized, treatment purpose — Drug: Saxagliptin 5 mg Q.D. × 24 weeks |
-| **Population** | T2DM patients (drug-naïve or on metformin alone), HbA1c 7.5–11.0%, adults ≤99 yrs, sites across China |
-
----
+| **Population** | T2DM patients (drug-naïve or on metformin alone), HbA1c 7.5–11.0%, adults up to 99 years, multiple sites including China |
 
 ## 2. Current landscape
 
-**Data pulled 2026-10-20 (UTC)** from ClinicalTrials.gov. Search: condition `Type 2 Diabetes Mellitus`; recruiting figures filter `overallStatus = RECRUITING`.
+**Data pulled 2026-10-24 (UTC)** from ClinicalTrials.gov. Search: condition `type 2 diabetes mellitus`; recruiting figures filtered to `overallStatus = RECRUITING`.
 
 ### 2.1 Total registered T2DM studies
 
-**11,977** studies registered on ClinicalTrials.gov matching condition "Type 2 Diabetes Mellitus" (no status or other filters).
+**11,992** studies registered on ClinicalTrials.gov matching condition "type 2 diabetes mellitus" (no status or other filters).
 
-### 2.2 Currently recruiting T2DM trials
-
-The recruiting cohort is **870 studies** (confirmed by direct count; the registry's aggregated trend analyses returned `totalStudies: 870` for this set).
+### 2.2 Currently recruiting T2DM trials: 876
 
 #### By phase
 
 | Phase | Recruiting trials |
 |---|---|
-| N/A | 408 |
-| Unknown | 202 |
+| N/A | 412 |
+| Unknown | 204 |
 | Phase 3 | 74 |
 | Phase 2 | 69 |
 | Phase 4 | 68 |
 | Phase 1 | 58 |
 | Early Phase 1 | 13 |
-| **Total studies analyzed** | **870** |
+| **Total recruiting studies analyzed** | **876** |
 
-> Note: "N/A" includes non-drug/non-interventional trials with no FDA-defined phase; "Unknown" covers records that don't report a phase. Multi-phase trials may be counted once per phase by the registry.
+> "N/A" covers non-drug / non-interventional studies with no FDA-defined phase; "Unknown" covers records that do not report a phase. Multi-phase trials may be counted once per phase as returned by the registry's aggregate analysis.
 
 #### By sponsor type
 
 | Sponsor type | Recruiting trials |
 |---|---|
-| Other (academic / non-industry) | 664 |
-| Industry | 179 |
+| Other (academic / non-industry) | 669 |
+| Industry | 180 |
 | Other government | 19 |
 | Research network | 6 |
 | NIH | 2 |
-| **Total studies analyzed** | **870** |
+| **Total recruiting studies analyzed** | **876** |
 
-> Academic and other non-industry sponsors account for ~76% of currently recruiting T2DM trials; industry sponsors ~21%.
+> Academic and other non-industry sponsors account for roughly 76% of currently recruiting T2DM trials; industry sponsors roughly 21%.
 
 #### By country (trial sites)
 
-| Country | Recruiting trials |
+| Country | Recruiting trials (site-level, as returned by the registry) |
 |---|---|
-| United States | 2,599 |
-| China | 748 |
-| Japan | 313 |
-| Canada | 309 |
-| Poland | 287 |
-| United Kingdom | 303 |
-| Germany | 369 |
-| Spain | 234 |
-| India | 233 |
-| Brazil | 198 |
+| South Korea | 205 |
 | Italy | 193 |
-| Argentina | 171 |
-| France | 165 |
-| Turkey (Türkiye) | 146 |
-| Australia | 144 |
-| Taiwan | 141 |
+| China | 748 |
+| United Kingdom | 303 |
+| Hong Kong | 23 |
+| United States | 2,600 |
+| Kazakhstan | 10 |
+| Canada | 309 |
+| Malaysia | 60 |
+| Germany | 372 |
+| Pakistan | 15 |
+| Turkey (Türkiye) | 147 |
+| Egypt | 13 |
+| Greece | 78 |
+| Croatia | 20 |
 | Hungary | 135 |
+| Japan | 313 |
+| Poland | 287 |
+| Portugal | 39 |
+| Slovakia | 55 |
+| Spain | 234 |
+| Thailand | 52 |
+| Australia | 144 |
+| Bulgaria | 78 |
 | Czechia | 106 |
+| India | 233 |
+| Denmark | 102 |
+| Ireland | 7 |
+| Argentina | 171 |
+| Chile | 33 |
+| Taiwan | 141 |
+| Austria | 31 |
 | Mexico | 103 |
-| South Africa | 96 |
-| Denmark | 98 |
-| Sweden | 45 |
+| Brazil | 199 |
 | Netherlands | 53 |
+| France | 165 |
+| Afghanistan | 2 |
+| Kenya | 2 |
+| Nigeria | 14 |
+| Sri Lanka | 7 |
+| Finland | 16 |
+| Sweden | 45 |
+| Reunion | 2 |
+| Belgium | 70 |
+| Georgia | 15 |
+| Moldova | 1 |
+| Romania | 64 |
+| Serbia | 13 |
+| South Africa | 96 |
+| Ukraine | 35 |
 | Norway | 14 |
-| Other countries (≤78 each) | 1,076 (aggregated remainder across ~60 further countries) |
-| **Total (site-level, exceeds 870)** | **—** |
+| Saudi Arabia | 26 |
+| Switzerland | 23 |
+| Ghana | 2 |
+| Israel | 50 |
+| Puerto Rico | 23 |
+| New Zealand | 21 |
+| Tunisia | 1 |
+| Slovenia | 5 |
+| Tanzania | 1 |
+| Indonesia | 5 |
+| Philippines | 24 |
+| Singapore | 18 |
+| Vietnam | 21 |
+| Paraguay | 2 |
+| Kuwait | 1 |
+| United Arab Emirates | 11 |
+| Qatar | 2 |
+| Jordan | 1 |
+| Costa Rica | 1 |
+| Côte d'Ivoire | 1 |
+| Iraq | 1 |
+| Algeria | 1 |
+| Guadeloupe | 1 |
+| Colombia | 11 |
+| Latvia | 8 |
+| Lithuania | 7 |
+| Uruguay | 1 |
+| Panama | 2 |
+| Greenland | 1 |
+| Russia | 2 |
+| Bahrain | 4 |
+| Nepal | 3 |
 
-> ⚠️ Country counts are **site-level tallies, not unique trials**: a multi-country trial is counted once per country in which it has a site, so the country table sums to far more than 870 unique studies. Figures above include the registry's exact counts for the top 20 recruiting countries and selected others; the full per-country list was captured on the pull date.
+> ⚠️ **Country counts are site-level tallies, not unique trials**: a multi-country trial is counted once per country in which it has a site, so the country table sums to far more than 876 unique studies. Figures are reported exactly as the registry's aggregate analysis returns them.
 
 ### 2.3 China sites (Beijing group relevance)
 
-**117** of the currently recruiting T2DM trials have at least one study site in **China** (registry advanced filter `AREA[LocationCountry]China`, Recruiting, condition "Type 2 Diabetes Mellitus"; 119 by an equivalent location-term search — 117 is the stricter, country-field-based figure).
-
----
+**117** of the currently recruiting T2DM trials have at least one study site in **China** (registry advanced-filter `AREA[LocationCountry] China`, recruiting, condition "type 2 diabetes mellitus"). At the site level the registry returns 748 China locations across these 117 trials. (An equivalent location-term search returns 119 — the country-field filter's 117 is the stricter, registry-native figure.)
 
 ## 3. Watch list — five most recently started recruiting T2DM trials
 
-Sorted by registry start date, descending (pulled 2026-10-20 UTC). All five confirmed recruiting, with title, sponsor and phase verified against each study's own registry record.
+Sorted by registry start date, descending (pulled 2026-10-24 UTC). Each trial's title, sponsor and phase was confirmed from its own registry record.
 
-| # | NCT ID | Title (brief) | Sponsor | Phase | Start date |
-|---|---|---|---|---|---|
-| 1 | [NCT07748208](https://clinicaltrials.gov/study/NCT07748208) | A Study Evaluating the Safety of Inavolisib and Fulvestrant With or Without Palbociclib in Participants With Advanced Breast Cancer (ABC) and Type 2 Diabetes | Hoffmann-La Roche | Phase 2 | 2026-10-30 (estimated) |
-| 2 | [NCT07878325](https://clinicaltrials.gov/study/NCT07878325) | Effects of a Specialized Diabetes and Heart Clinic and Detection of Unrecognized Heart Failure in People With Type 2 Diabetes and Cardiovascular Disease | Odense University Hospital | N/A | 2026-10-20 (estimated) |
-| 3 | [NCT07409714](https://clinicaltrials.gov/study/NCT07409714) | SMART 2D: Study of Montelukast's Effects on Renal and Cardiovascular Health in Adolescents and Young Adults With Type 2 Diabetes | University of Colorado, Denver | Early Phase 1 | 2026-10-12 (estimated) |
-| 4 | [NCT07868601](https://clinicaltrials.gov/study/NCT07868601) | LIfestyle MEtabotype Study A (LIME-A) | German Institute of Human Nutrition | N/A (observational) | 2026-10-10 (estimated) |
-| 5 | [NCT07868354](https://clinicaltrials.gov/study/NCT07868354) | A Research Study Investigating How Adults With Overweight or Obesity, With or Without Type 2 Diabetes, Tolerate Switching to a New Treatment (Zenagamtide) From Their Current Tirzepatide Medication | Novo Nordisk A/S | Phase 1 | 2026-10-08 (actual) |
+| # | NCT ID | Title (brief) | Sponsor | Phase | Start date | Registry status |
+|---|---|---|---|---|---|---|
+| 1 | [NCT07748208](https://clinicaltrials.gov/study/NCT07748208) | A Study Evaluating the Safety of Inavolisib and Fulvestrant With or Without Palbociclib in Participants With Advanced Breast Cancer (ABC) and Type 2 Diabetes | Hoffmann-La Roche | Phase 2 | 2026-10-30 (estimated) | RECRUITING |
+| 2 | [NCT07888257](https://clinicaltrials.gov/study/NCT07888257) | LIfestyle MEtabotype Study B (LIME-B) | German Institute of Human Nutrition | N/A (observational cohort) | 2026-10-26 (estimated) | RECRUITING |
+| 3 | [NCT07802106](https://clinicaltrials.gov/study/NCT07802106) | Systemic Biochemical Signature and Functional Quality Index of Calcaneal Bone Marrow Aspirate in Adults Undergoing Foot or Ankle Surgery | Universidade Sao Francisco | N/A (observational cohort) | 2026-10-21 (actual) | RECRUITING |
+| 4 | [NCT07878325](https://clinicaltrials.gov/study/NCT07878325) | Effects of a Specialized Diabetes and Heart Clinic and Detection of Unrecognized Heart Failure in People With Type 2 Diabetes and Cardiovascular Disease | Odense University Hospital | N/A | 2026-10-20 (estimated) | RECRUITING |
+| 5 | [NCT07409714](https://clinicaltrials.gov/study/NCT07409714) | SMART 2D: Study of Montelukast's Effects on Renal and Cardiovascular Health in Adolescents and Young Adults With Type 2 Diabetes | University of Colorado, Denver | Early Phase 1 | 2026-10-12 (estimated) | RECRUITING |
 
 **One-line notes (as filed in the follow-up tracker):**
 
-1. **NCT07748208** — Oncology–industry crossover with a hyperglycemia-safety focus in T2DM patients on inavolisib; registry start date is future-dated (estimated).
-2. **NCT07878325** — Academic care-delivery model trial (integrated cardio-metabolic clinic) with HFpEF phenotyping — non-drug intervention.
-3. **NCT07409714** — Drug repurposing (cysteinyl leukotriene inhibitor) for kidney/vascular protection in adolescent and young-adult T2DM.
-4. **NCT07868601** — Precision-nutrition phenotyping of individual postprandial glycemic response across prediabetes / T2D / no dysglycemia.
-5. **NCT07868354** — Incretin class-switch tolerability study — relevant to GLP-1 receptor agonist switching strategies.
+1. **NCT07748208** — Oncology–industry crossover with a hyperglycemia-safety focus in T2DM patients on inavolisib; registry start date is future-dated (estimated, 2026-10-30).
+2. **NCT07888257** — Precision-nutrition phenotyping (β-hydroxybutyrate dose effects on neurocognition and decision-making) across prediabetes / T2D / no dysglycemia; interventional crossover module of the LIME study.
+3. **NCT07802106** — Single-center observational cohort (Brazil) on the calcaneal bone marrow aspirate functional quality index in adults with or without T2DM undergoing foot or ankle surgery.
+4. **NCT07878325** — Academic care-delivery model trial (integrated cardio-metabolic clinic) with HFpEF phenotyping — non-drug intervention.
+5. **NCT07409714** — Drug repurposing (cysteinyl leukotriene inhibitor) for kidney/vascular protection in adolescent and young-adult T2DM (ages 14–24).
 
 ### Follow-up tracker
 
-Tracking issue **[#3 — Watch list follow-ups](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/3)** lists all five NCT IDs with one-line notes; each trial is filed as its own sub-issue (#4–#8) so owners can be assigned:
+Tracking issue **[#1 — Watch list follow-ups](https://github.com/mcpmark-eval-liuhezi/t2dm-trial-landscape/issues/1)** lists all five NCT IDs with one-line notes; each trial is filed as its own sub-issue under this parent issue so owners can be assigned:
 
-- #4 — NCT07748208 (Hoffmann-La Roche, Phase 2)
+- #2 — NCT07748208 (Hoffmann-La Roche, Phase 2)
+- #3 — NCT07888257 (German Institute of Human Nutrition, N/A)
+- #4 — NCT07802106 (Universidade Sao Francisco, N/A)
 - #5 — NCT07878325 (Odense University Hospital, N/A)
 - #6 — NCT07409714 (University of Colorado, Denver, Early Phase 1)
-- #7 — NCT07868601 (German Institute of Human Nutrition, N/A)
-- #8 — NCT07868354 (Novo Nordisk A/S, Phase 1)
-
----
 
 ## Methodology & caveats
 
-- **Source:** ClinicalTrials.gov registry API, queried 2026-10-20 (UTC). Counts change daily as records are registered, updated and completed.
-- **Condition search:** the query `Type 2 Diabetes Mellitus` was used as the condition term for the total and all recruiting breakdowns; counts are as returned by the registry.
-- **Recruiting total:** direct filtered count = 870; the registry's aggregated analyses for the same query/filters also returned `totalStudies: 870`.
-- **Aggregated analysis sets:** phase / sponsor-type / country counts come from the registry's aggregation endpoints on the recruiting set (870 studies each).
-- **Country counts are site-level**, not unique trials — see the warning in §2.2.
-- **Watch list:** the five most recent start dates among recruiting trials (descending). Two of the five (NCT07748208, NCT07878325) carry estimated start dates in the near future per the registry — they are currently flagged Recruiting.
-- **"Most recently started" ranking:** `StartDate:desc` sort over the recruiting set; ties or records with partial dates could rank differently.
+- **Data source and pull date:** ClinicalTrials.gov (v2 API), condition `type 2 diabetes mellitus`, pulled **2026-10-24 (UTC)**. Counts are reported exactly as the registry's aggregate analyses and direct queries returned them; re-pull before each quarterly review since counts change continuously.
+- **Condition search term:** the condition module string "Type 2 Diabetes Mellitus" is used as the registry returns it for this topic (includes "Diabetes Mellitus, Type 2" condition lists).
+- **Recruiting filter:** `overallStatus = RECRUITING`. The recruiting total of 876 was confirmed by two independent registry queries.
+- **Country/phase/sponsor breakdowns** come from the registry's aggregate trend analyses for the recruiting set; the country breakdown is site-level, so it sums to more than the 876 unique recruiting studies — see the table header note.
+- **SUNSHINE** details (phase, status, sponsor, enrollment, dates) are from the study's own record; it is completed (sponsor AstraZeneca, Phase 4, started November 2012, completed May 2014, n = 2,165).
+- **Watch list** = five most recently started T2DM trials with status RECRUITING, verified by each trial's own registry record (title, sponsor, phase, dates).
+- **Repository note:** repo created under the org `mcpmark-eval-liuhezi` (personal-account creation was blocked by token permissions) and is currently public — flip to Private in settings for team-only access.
